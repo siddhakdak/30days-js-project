@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="w-full h-[100vh] p-10 bg-gradient-to-bl from-gray-900 via-purple-900 to-violet-600 bg-red-100"
+    >
+      <div
+        class="w-full max-w-[450px] bg-white mt-[100px] mx-auto mb-[20px] pt-[40px] px-10 pb-[70px] rounded-2xl"
+      >
+        <h2 class="flex items-center font-extrabold">
+          To-Do List <img class="w-[30px] ml-1" src="/images/icon.png" alt="" />
+        </h2>
+        <div class="mt-4 rounded-xl w-full bg-gray-200">
+          <input
+            class="w-[70%] bg-transparent p-3 outline-none border-none"
+            placeholder="Add your text "
+            type="text"
+          />
+          <button
+            class="p-3 bg-orange-500 rounded-tr-2xl rounded-br-2xl w-[28%] font-bold text-white"
+          >
+            Add
+          </button>
+        </div>
+        <ul class="my-3">
+            <li class="pl-9 py-2 relative before:absolute before:h-[20px] before:w-[20px] befor:content-[''] before:top-[10px] before:left-[8px] before:rounded-3xl before:bg-[url('/images/unchecked.png')] before:bg-cover before:bg-center after:line-through after:bg-[url('/images/checked.png')]">task 1</li>
+            <li class="pl-9 py-2 relative before:absolute before:h-[20px] before:w-[20px] befor:content-none before:top-[10px] before:left-[8px] before:rounded-3xl before:bg-[url('/images/unchecked.png')] before:bg-cover before:bg-center ">task 2</li>
+            <li class="pl-9 py-2 relative before:absolute before:h-[20px] before:w-[20px] befor:content-none before:top-[10px] before:left-[8px] before:rounded-3xl before:bg-[url('/images/unchecked.png')] before:bg-cover before:bg-center">task 3</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
